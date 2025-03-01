@@ -14,31 +14,31 @@
         }
     }
 
-    //public class Human
-    //{
-    //    public string Name { get; set; }
-    //    public int Age { get; set; }
-    //    public Human(string name, int age)
-    //    {
-    //        Name = name;
-    //        Age = age;
-    //    }
-    //    public virtual void DoWork()
-    //    {
-    //        Console.WriteLine($"{Name} is working, Age: {Age}");
-    //    }
-    //}
+    public class Human
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public Human(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+        public virtual void DoWork()
+        {
+            Console.WriteLine($"{Name} is working, Age: {Age}");
+        }
+    }
 
-    //public class Worker : Human
-    //{
-    //    public Worker(string name, int age) : base(name, age)
-    //    {
-    //    }
-    //    public override void DoWork()
-    //    {
-    //        Console.WriteLine($"{Name} is working as a worker, Age: {Age}");
-    //    }
-    //}
+    public class Builder : Human
+    {
+        public Builder(string name, int age) : base(name, age)
+        {
+        }
+        public override void DoWork()
+        {
+            Console.WriteLine($"{Name} is working as a worker, Age: {Age}");
+        }
+    }
 
     public abstract class  Figura
     {
