@@ -1,4 +1,6 @@
-﻿namespace PracticaNasled
+﻿using System.Text;
+
+namespace PracticaNasled
 {
     internal class Program
     {
@@ -27,6 +29,12 @@
         {
             Console.WriteLine($"{Name} is working, Age: {Age}");
         }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"Name: {Name}, Age: {Age}");
+            return sb.ToString();
+        }
     }
 
     public class Builder : Human
@@ -39,6 +47,13 @@
         public override void DoWork()
         {
             Console.WriteLine($"{Name} is working as a builder, Age: {Age}, Posada: {posada}");
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(base.ToString());
+            sb.Append($"Posada: {posada}");
+            return sb.ToString();
         }
     }
 
@@ -53,6 +68,13 @@
         {
             Console.WriteLine($"{Name} is working as a sailor, Age: {Age}, Zvanie: {Zvaxniye}");
         }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(base.ToString());
+            sb.Append($"Zvanie: {Zvaxniye}");
+            return sb.ToString();
+        }
     }
 
     public class Pilot : Human
@@ -65,6 +87,13 @@
         public override void DoWork()
         {
             Console.WriteLine($"{Name} is working as a pilot, Age: {Age}, Reysi: {reys}");
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(base.ToString());
+            sb.Append($"Reysi: {reys}");
+            return sb.ToString();
         }
     }
 
