@@ -31,14 +31,43 @@
 
     public class Builder : Human
     {
-        public Builder(string name, int age) : base(name, age)
+        private string posada;
+        public Builder(string name, int age, string posada) : base(name, age)
         {
+            this.posada = posada;
         }
         public override void DoWork()
         {
-            Console.WriteLine($"{Name} is working as a worker, Age: {Age}");
+            Console.WriteLine($"{Name} is working as a builder, Age: {Age}, Posada: {posada}");
         }
     }
+
+    public class Sailor : Human
+    {
+        private string Zvaxniye;
+        public Sailor(string name, int age, string Zvaxniye) : base(name, age)
+        {
+            this.Zvaxniye = Zvaxniye;
+        }
+        public override void DoWork()
+        {
+            Console.WriteLine($"{Name} is working as a sailor, Age: {Age}, Zvanie: {Zvaxniye}");
+        }
+    }
+
+    public class Pilot : Human
+    {
+        private int reys;
+        public Pilot(string name, int age, int reys) : base(name, age)
+        {
+            this.reys = reys;
+        }
+        public override void DoWork()
+        {
+            Console.WriteLine($"{Name} is working as a pilot, Age: {Age}, Reysi: {reys}");
+        }
+    }
+
 
     public abstract class  Figura
     {
